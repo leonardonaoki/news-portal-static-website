@@ -47,6 +47,13 @@ img{
   margin-inline: auto;
 }
 
+@media (width < 80em){
+  .container{
+    max-width: 100%;
+    padding-inline: 1rem;
+  }
+}
+
 main{
   margin-block:40px;
   row-gap:80px;
@@ -59,6 +66,19 @@ main{
   "weekly weekly"
   "ai aside";
 }
+@media (width < 80em){
+  main{
+    row-gap:2rem;
+
+    grid-template-columns: initial;
+    grid-template-areas: 
+    "featured"
+    "weekly"
+    "ai"
+    "aside";
+  }
+}
+
 
 .content-tag{
   display:inline-block;
@@ -71,3 +91,14 @@ main{
   color:var(--text-color-primary);
   box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
 }
+
+@media (width < 80em){
+  .desktop-only{
+     display:none;
+  } 
+ }
+ @media (width >= 80em){
+   .mobile-only{
+     display:none;
+   }
+ }
